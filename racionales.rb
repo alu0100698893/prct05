@@ -19,13 +19,18 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
            resultado = Fracciones.new(@num*nuevo.num , @dem*nuevo.dem) #El resultado es un nuevo objeto de tipo fracciones que se guarda en 
                                                                        #en un variable local denominada resultado
         end
+
+        def /(nuevo) #metodo para realizar la division de dos fracciones pasamos un objeto como parametro
+           resultado = Fracciones.new(@num*nuevo.dem , @dem*nuevo.num) #El resultado es un nuevo objeto de tipo fracciones que se guarda en 
+                                                                       #en un variable local denominada resultado
+        end
        
 end 
 
 
 #Aqui vamos a realizar algunas pruebas con las funciones que vamos creando y los objetos que vamos a crear
 rac1 = Fracciones.new(6,3) #rac1 y rac2 son con las fracciones
-rac2 = Fracciones.new(5,4) #que vamos a trabajar durante estas pruebas
+rac2 = Fracciones.new(5,4) #que vamos a trabajar durante estas pruebas rac2 seria el objeto nuevo de nuestras funciones
 
 puts "La fraccion es : #{rac1}/#{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
 
@@ -37,4 +42,8 @@ puts "#{rac1} * #{rac2} = #{rac3} "
 
 #########################################################
 
+rac4= rac1 / rac2
+puts "Division"
+puts "#{rac1} / #{rac2} = #{rac3}"
 
+#########################################################
