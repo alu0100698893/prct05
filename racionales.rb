@@ -15,12 +15,26 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
              "#{num}/#{dem}"
         end
 
-      
+        def *(nuevo) #metodo para realizar la multiplicacion de dos fraciones pasamos un objeto como parametro
+           resultado = Fracciones.new(@num*nuevo.num , @dem*nuevo.dem) #El resultado es un nuevo objeto de tipo fracciones que se guarda en 
+                                                                       #en un variable local denominada resultado
+        end
+       
 end 
 
 
 #Aqui vamos a realizar algunas pruebas con las funciones que vamos creando y los objetos que vamos a crear
-rac1 = Fracciones.new(6,3)
-rac2 = Fracciones.new(5,4)
+rac1 = Fracciones.new(6,3) #rac1 y rac2 son con las fracciones
+rac2 = Fracciones.new(5,4) #que vamos a trabajar durante estas pruebas
 
- puts "La fraccion es : #{rac1}/#{rac2}" #solo por ahora para ver si la funcion to_s funciona
+puts "La fraccion es : #{rac1}/#{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
+
+#########################################################
+
+rac3= rac1 * rac2
+puts "Producto"
+puts "#{rac1} * #{rac2} = #{rac3} "
+
+#########################################################
+
+
