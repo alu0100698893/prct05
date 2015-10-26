@@ -1,7 +1,9 @@
 
 #En este fichero implementaremos un clase para trabajar con operaciones sobre numeros racionales que seran nuestros objetos
 
-#require "gcd.rb" #le decimos a nuestro programa que use el fichero gcd que contiene el maximo comun divisor para la simplificacion
+require "./gcd.rb" #le decimos a nuestro programa que use el fichero gcd que contiene el maximo comun divisor para la simplificacion
+
+
 
 class Fracciones     #clase que contrendra las funciones para trabajar con los objetos
 
@@ -18,13 +20,19 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
         def *(nuevo) #metodo para realizar la multiplicacion de dos fraciones pasamos un objeto como parametro
            resultado = Fracciones.new(@num*nuevo.num , @dem*nuevo.dem) #El resultado es un nuevo objeto de tipo fracciones que se guarda en 
                                                                        #en un variable local denominada resultado
+           simplificacion(resultado)
         end
 
         def /(nuevo) #metodo para realizar la division de dos fracciones pasamos un objeto como parametro
            resultado = Fracciones.new(@num*nuevo.dem , @dem*nuevo.num) #El resultado es un nuevo objeto de tipo fracciones que se guarda en 
                                                                        #en un variable local denominada resultado
+	   simplificacion(resultado)
         end
        
+	def simplificacion(nuevo) #metodo para realizar la simplificacion del resultado de las operaciones
+	   aux = gcd(nuevo.num , nuevo.dem) #hallamos el mcd del numerados y el denominador
+           Fracciones.new(nuevo.num/aux , nuevo.dem/aux) #divide los valores anteriores entre el mcd obtenido
+        end
 end 
 
 
