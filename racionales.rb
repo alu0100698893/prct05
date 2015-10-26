@@ -29,11 +29,18 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
 	   simplificacion(resultado)
         end
 
-	def +(nuevo) #metodo para realizar la suma de dos fracciones pasaun objeto como parametro
+	def +(nuevo) #metodo para realizar la suma de dos fracciones pasando un objeto como parametro
 	   aux = mcm(@dem , nuevo.dem) #mcm de los denominadores de nuestras fracciones
-           resultado = Fracciones.new(((aux/@dem)*@num)+((aux/nuevo.dem)*nuevo.num),aux)
+           resultado = Fracciones.new(((aux/@dem)*@num)+((aux/nuevo.dem)*nuevo.num),aux)#operacion de suma
            simplificacion(resultado)
 
+	end
+
+        def -(nuevo) #metodo para realizar la resta de dos fracciones pasando un objeto como parametro
+           aux = mcm(@dem , nuevo.dem) #mcm de los denominadores de nuestras fraciones
+	   resultado = Fracciones.new(((aux/@dem)*@num)-((aux/nuevo.dem)*nuevo.num),aux)#operacion de resta
+           simplificacion(resultado)
+           
 	end
        
 	def simplificacion(nuevo) #metodo para realizar la simplificacion del resultado de las operaciones
@@ -44,10 +51,11 @@ end
 
 
 #Aqui vamos a realizar algunas pruebas con las funciones que vamos creando y los objetos que vamos a crear
+
 rac1 = Fracciones.new(6,3) #rac1 y rac2 son con las fracciones
 rac2 = Fracciones.new(5,4) #que vamos a trabajar durante estas pruebas rac2 seria el objeto nuevo de nuestras funciones
 
-puts "La fraccion es : #{rac1}/#{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
+puts "Las fracciones son : #{rac1} y #{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
 
 #########################################################
 
@@ -66,7 +74,7 @@ puts "#{rac1} / #{rac2} = #{rac4}"
 rac5 = Fracciones.new(7,4)
 rac6 = Fracciones.new(8,12)
 
-puts "La fraccion es : #{rac1}/#{rac2}"
+puts "Las fracciones son : #{rac5} y #{rac6}"
 
 #########################################################
 
@@ -75,3 +83,7 @@ puts "Suma"
 puts "#{rac5} + #{rac6} = #{rac7}"
 
 #########################################################
+
+rac8= rac5 - rac6
+puts "Resta"
+puts "#{rac5} - #{rac6} = #{rac8}"
