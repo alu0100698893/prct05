@@ -2,7 +2,7 @@
 #En este fichero implementaremos un clase para trabajar con operaciones sobre numeros racionales que seran nuestros objetos
 
 require "./gcd.rb" #le decimos a nuestro programa que use el fichero gcd que contiene el maximo comun divisor para la simplificacion
-
+require "./mcm.rb" #le decimos a nuestro programa que use el fichero mcm que contiene el minimo comun multiplo para la suma y resta
 
 
 class Fracciones     #clase que contrendra las funciones para trabajar con los objetos
@@ -28,6 +28,13 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
                                                                        #en un variable local denominada resultado
 	   simplificacion(resultado)
         end
+
+	def +(nuevo) #metodo para realizar la suma de dos fracciones pasaun objeto como parametro
+	   aux = mcm(@dem , nuevo.dem) #mcm de los denominadores de nuestras fracciones
+           resultado = Fracciones.new(((aux/@dem)*@num)+((aux/nuevo.dem)*nuevo.num),aux)
+           simplificacion(resultado)
+
+	end
        
 	def simplificacion(nuevo) #metodo para realizar la simplificacion del resultado de las operaciones
 	   aux = gcd(nuevo.num , nuevo.dem) #hallamos el mcd del numerados y el denominador
@@ -56,4 +63,15 @@ puts "#{rac1} / #{rac2} = #{rac4}"
 
 #########################################################
 
+rac5 = Fracciones.new(7,4)
+rac6 = Fracciones.new(8,12)
 
+puts "La fraccion es : #{rac1}/#{rac2}"
+
+#########################################################
+
+rac7= rac5 + rac6
+puts "Suma"
+puts "#{rac5} + #{rac6} = #{rac7}"
+
+#########################################################
