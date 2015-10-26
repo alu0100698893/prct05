@@ -52,6 +52,8 @@ puts "#{rac1} * #{rac2} = #{rac3} "
 
 rac4= rac1 / rac2
 puts "Division"
-puts "#{rac1} / #{rac2} = #{rac3}"
+puts "#{rac1} / #{rac2} = #{rac4}"
 
 #########################################################
+
+
