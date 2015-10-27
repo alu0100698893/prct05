@@ -19,3 +19,8 @@ desc "Pruebas unitarias solo para la operacion de resta"
     task :resta do
     	sh "ruby -I. test/tc_racionales.rb -n /resta/"
     end
+
+desc "Pruebas unitarias solo para la operacion de multiplicacion"
+    task :multiplicacion do
+        sh "ruby -I. test/tc_racionales.rb -n /multiplicacion/"
+    end
