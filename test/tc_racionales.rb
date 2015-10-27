@@ -23,6 +23,12 @@ class Test_Fraciones < Test::Unit::TestCase
 	end
 
 	def test_suma #para realizar solo las pruebas con la operacion suma
+           rac1 = @racional1
+ 	   rac2 = @racional2
+           rac3 = rac1 + rac2
+           puts "El resultado de la operacion es: #{rac1} + #{rac2} = #{rac3}"
 	end
+
+	
 	  
 end
