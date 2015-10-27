@@ -29,6 +29,11 @@ class Test_Fraciones < Test::Unit::TestCase
            puts "El resultado de la operacion es: #{rac1} + #{rac2} = #{rac3}"
 	end
 
-	
+	def test_resta #para realizar solo las pruebas con la operacion resta
+	   rac4 = @racional1
+           rac5 = @racional2
+           rac6 = rac4 - rac5
+	   puts "El resultado de la operacion es: #{rac4} + #{rac5} = #{rac6}"
+	end
 	  
 end
