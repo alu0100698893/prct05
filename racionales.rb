@@ -10,7 +10,13 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
 	attr_reader :num , :dem #con attr_reader podemos acceder a los atributos del objeto sin definir los metodos geters
 
 	def initialize (num,dem) #metodo para inicializar los objetos
-             @num , @dem = num , dem #@varaibles de instancia
+	   if dem != 0
+	      @dem=dem
+	   else
+              puts "No puede poner un denominardor igual a cero(0)"
+	   end
+             @num = num #@varaibles de instancia
+           
 	end
      
         def to_s  #metodo para convertir nuestros numeros en cadenas string para sacarlos por pantalla de la forma a/b
@@ -56,10 +62,10 @@ end
 
 #Aqui vamos a realizar algunas pruebas con las funciones que vamos creando y los objetos que vamos a crear
 
-rac1 = Fracciones.new(-8,45) #rac1 y rac2 son con las fracciones
-rac2 = Fracciones.new(96,6) #que vamos a trabajar durante estas pruebas rac2 seria el objeto nuevo de nuestras funciones
+#rac1 = Fracciones.new(-8,9) #rac1 y rac2 son con las fracciones
+#rac2 = Fracciones.new(96,4) #que vamos a trabajar durante estas pruebas rac2 seria el objeto nuevo de nuestras funciones
 
-puts "Las fracciones son : #{rac1} y #{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
+#puts "Las fracciones son : #{rac1} y #{rac2}" #solo por ahora para ver si la funcion to_s funciona rac1 y rac2 debera mostrarse como a/b
 
 #########################################################
 
