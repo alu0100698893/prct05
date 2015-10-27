@@ -30,23 +30,23 @@ class Test_Fraciones < Test::Unit::TestCase
 	end
 
 	def test_resta #para realizar solo las pruebas con la operacion resta
-	   rac4 = @racional1
-           rac5 = @racional2
-           rac6 = rac4 - rac5
-	   puts "El resultado de la operacion es: #{rac4} + #{rac5} = #{rac6}"
+	   rac1 = @racional1
+ 	   rac2 = @racional2
+           rac3 = rac1 - rac2
+           puts "El resultado de la operacion es: #{rac1} - #{rac2} = #{rac3}"
 	end
 
 	def test_multiplicacion #para realizar solo las pruebas con la operacion de multiplicacion
-           rac7= Fracciones.new(5,14)
-           rac8= Fracciones.new(4,13)
-           rac9= rac7 * rac8
-	   puts "El resultado de la operacion es: #{rac7} + #{rac8} = #{rac9}"
+           rac1 = @racional1
+ 	   rac2 = @racional2
+           rac3 = rac1 * rac2
+           puts "El resultado de la operacion es: #{rac1} * #{rac2} = #{rac3}"
         end
 
 	def test_division #para realizar solo las pruebas con la operacion de division
-	   rac10= Fracciones.new(5,14)
-           rac11= Fracciones.new(4,13)
-           rac12= rac10 / rac11
-	   puts "El resultado de la operacion es: #{rac10} + #{rac11} = #{rac12}"
+	   rac1 = @racional1
+ 	   rac2 = @racional2
+           rac3 = rac1 / rac2
+           puts "El resultado de la operacion es: #{rac1} / #{rac2} = #{rac3}"
 	end
 end
