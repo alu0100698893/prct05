@@ -49,4 +49,12 @@ class Test_Fraciones < Test::Unit::TestCase
            rac3 = rac1 / rac2
            puts "El resultado de la operacion es: #{rac1} / #{rac2} = #{rac3}"
 	end
+
+	def test_type_check
+           assert_raise(RuntimeError) {Fracciones.new('6','12')}
+        end
+
+	def test_failure
+	   assert_equal("(8,30)",Fracciones.new(8,30).to_s)
+        end
 end
