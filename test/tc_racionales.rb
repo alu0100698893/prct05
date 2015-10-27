@@ -42,5 +42,11 @@ class Test_Fraciones < Test::Unit::TestCase
            rac9= rac7 * rac8
 	   puts "El resultado de la operacion es: #{rac7} + #{rac8} = #{rac9}"
         end
-	  
+
+	def test_division #para realizar solo las pruebas con la operacion de division
+	   rac10= Fracciones.new(5,14)
+           rac11= Fracciones.new(4,13)
+           rac12= rac10 / rac11
+	   puts "El resultado de la operacion es: #{rac10} + #{rac11} = #{rac12}"
+	end
 end
