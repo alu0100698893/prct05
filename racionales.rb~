@@ -50,7 +50,7 @@ class Fracciones     #clase que contrendra las funciones para trabajar con los o
 	end
 
 	def -@	#metodo para poner al numerador el signo negativo
-	    return -@num #simplemente indicamos que a la variable instancia num si le ponemos un menos delante es valido 
+	    return -@ #simplemente indicamos que a la variable instancia num si le ponemos un menos delante es valido 
 	end
        
 	def simplificacion(nuevo) #metodo para realizar la simplificacion del resultado de las operaciones
